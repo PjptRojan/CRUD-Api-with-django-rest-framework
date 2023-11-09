@@ -17,16 +17,16 @@ def get_data(id=None):
 #to post data(create)
 def post_data():
    data = {
-      'name': 'SunchaVox',
-      'roll': 106,
-      'city': 'Patan'
+      'name': 'Rohan',
+      'roll': 110,
+      'city': 'Illam'
    }
    json_data = json.dumps(data)
    res = requests.post(url=URL, data= json_data)
    newdata = res.json()
    print(newdata)
 
-post_data()
+# post_data()
 
 #to update data(Put, Patch)
 def update_data():
@@ -38,14 +38,16 @@ def update_data():
     json_data = json.dumps(data)
     res = requests.put(url= URL, data= json_data)
     newdata = res.json()
+    print(newdata)
 
 # update_data()
 
 #to delete data(delete)
 def delete_data():
-    data = { 'id': 2 }
+    data = { 'id': 10 }
     json_data = json.dumps(data)
     res = requests.delete(url= URL, data= json_data)
     newdata = res.json()
-    
-# delete_data()
+    print(newdata)
+
+delete_data()
