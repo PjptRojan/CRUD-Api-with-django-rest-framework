@@ -25,7 +25,7 @@ def hello_world(request):
     
     if request.method == "POST":
      print(request.data) 
-     return Response({'msg':'This is a post request'})
+     return Response({'msg':'This is a post request', 'data': request.data})
 
 # @api_view(['PUT'])
 # def hello_world(request):
